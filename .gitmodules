@@ -1,0 +1,4 @@
+
+[submodule "frontend/volt"]
+	path = frontend/volt
+	url = https://github.com/themesberg/volt-react-dashboard.git

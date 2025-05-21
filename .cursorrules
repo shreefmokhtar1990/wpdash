@@ -1,0 +1,22 @@
+
+# Cursor AI Rules — Local Windows/WSL (No Docker)
+
+## Context
+- Backend: Python 3.12 + Flask + SQLAlchemy + Alembic + Celery
+- Frontend: Volt React Dashboard (React 18, Bootstrap 5)
+- Services run locally on WSL2 (Ubuntu) — MariaDB & Redis installed via apt
+
+## Directives
+1. Execute tasks with minimal chatter.
+2. Produce production‑ready code.
+3. Use POSIX paths `/home/…` inside WSL.
+4. Commit messages one‑line Conventional:
+   ```
+   feat: implement /api/sites
+   ```
+5. Keep `scratchpad.md` updated (task ▸ plan ▸ progress ▸ lessons).
+
+## Workflow
+- Activate virtualenv `.venv`
+- Use `make run` to start Flask (port 8000) and `npm start` (port 3000) for React.
+- Run `make migrate` after model changes; Alembic handles schema.
